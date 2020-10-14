@@ -104,8 +104,6 @@ class GameScene: SKScene {
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
             let location = touch.location(in: self)
-            SoundHelper.shared.playSound(ofType: .ball)
-            
             
             if currentGameType == .player2 {
                 if location.y > 0 {
@@ -143,9 +141,7 @@ class GameScene: SKScene {
             
             break
         }
-        
-        
-        
+
         if ball.position.y <= main.position.y - 30 {
             addScore(playerWhoWon: enemy)
         }
