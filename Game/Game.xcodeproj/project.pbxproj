@@ -24,6 +24,11 @@
 		88FCA7C4252DFDC500EE1D55 /* WinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FCA7C3252DFDC500EE1D55 /* WinVC.swift */; };
 		88FCA7CC252E422700EE1D55 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FCA7CB252E422700EE1D55 /* GameOverScene.swift */; };
 		88FCA7D4252F39EF00EE1D55 /* WinScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FCA7D3252F39EF00EE1D55 /* WinScene.swift */; };
+		AEC0A17B2536811600F107BA /* SoundHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC0A17A2536811600F107BA /* SoundHelper.swift */; };
+		AEC0A1852536820D00F107BA /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEC0A1812536820C00F107BA /* music.mp3 */; };
+		AEC0A1862536820D00F107BA /* ballSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEC0A1822536820C00F107BA /* ballSound.mp3 */; };
+		AEC0A1872536820D00F107BA /* winSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEC0A1832536820C00F107BA /* winSound.mp3 */; };
+		AEC0A1882536820D00F107BA /* loseSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEC0A1842536820D00F107BA /* loseSound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,11 @@
 		88FCA7C3252DFDC500EE1D55 /* WinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinVC.swift; sourceTree = "<group>"; };
 		88FCA7CB252E422700EE1D55 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		88FCA7D3252F39EF00EE1D55 /* WinScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinScene.swift; sourceTree = "<group>"; };
+		AEC0A17A2536811600F107BA /* SoundHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundHelper.swift; sourceTree = "<group>"; };
+		AEC0A1812536820C00F107BA /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
+		AEC0A1822536820C00F107BA /* ballSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ballSound.mp3; sourceTree = "<group>"; };
+		AEC0A1832536820C00F107BA /* winSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = winSound.mp3; sourceTree = "<group>"; };
+		AEC0A1842536820D00F107BA /* loseSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = loseSound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				88DA409E252DF35B00C3589C /* LLPIXEL3.ttf */,
+				AEC0A17A2536811600F107BA /* SoundHelper.swift */,
 				88DA40A3252DF39600C3589C /* GameType.swift */,
 				88DA4066252DF2D200C3589C /* AppDelegate.swift */,
 				88DA4068252DF2D200C3589C /* SceneDelegate.swift */,
@@ -130,6 +141,7 @@
 				88DA40A5252DF39600C3589C /* GameViewController.swift */,
 				88DA40A4252DF39600C3589C /* MenuVC.swift */,
 				88FCA7C3252DFDC500EE1D55 /* WinVC.swift */,
+				AEC0A17F2536816700F107BA /* Resources */,
 				88DA406F252DF2D300C3589C /* Assets.xcassets */,
 				88DA4071252DF2D300C3589C /* LaunchScreen.storyboard */,
 				88DA4074252DF2D300C3589C /* Info.plist */,
@@ -153,6 +165,25 @@
 				88DA408A252DF2D300C3589C /* Info.plist */,
 			);
 			path = GameUITests;
+			sourceTree = "<group>";
+		};
+		AEC0A17F2536816700F107BA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AEC0A1802536817000F107BA /* Sounds */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AEC0A1802536817000F107BA /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				AEC0A1822536820C00F107BA /* ballSound.mp3 */,
+				AEC0A1842536820D00F107BA /* loseSound.mp3 */,
+				AEC0A1812536820C00F107BA /* music.mp3 */,
+				AEC0A1832536820C00F107BA /* winSound.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,12 +289,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEC0A1872536820D00F107BA /* winSound.mp3 in Resources */,
 				88DA409A252DF34000C3589C /* GameScene.sks in Resources */,
 				88DA40B8252DF6DC00C3589C /* Actions.sks in Resources */,
 				88DA40AD252DF42C00C3589C /* LLPIXEL3.ttf in Resources */,
 				88DA4073252DF2D300C3589C /* LaunchScreen.storyboard in Resources */,
 				88DA4070252DF2D300C3589C /* Assets.xcassets in Resources */,
+				AEC0A1852536820D00F107BA /* music.mp3 in Resources */,
 				88DA406E252DF2D200C3589C /* Main.storyboard in Resources */,
+				AEC0A1862536820D00F107BA /* ballSound.mp3 in Resources */,
+				AEC0A1882536820D00F107BA /* loseSound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88DA40A9252DF39600C3589C /* GameViewController.swift in Sources */,
+				AEC0A17B2536811600F107BA /* SoundHelper.swift in Sources */,
 				88DA4067252DF2D200C3589C /* AppDelegate.swift in Sources */,
 				88FCA7CC252E422700EE1D55 /* GameOverScene.swift in Sources */,
 				88FCA7D4252F39EF00EE1D55 /* WinScene.swift in Sources */,
