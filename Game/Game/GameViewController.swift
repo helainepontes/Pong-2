@@ -15,6 +15,14 @@ var currentGameType = gameType.medium
 
 class GameViewController: UIViewController {
 
+    @IBOutlet weak var backButton: UIButton! {
+        didSet {
+            backButton.isHidden = true
+            backButton.alpha = 0
+            backButton.addTarget(self, action: #selector(backToMenu), for: .touchUpInside)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,7 +38,6 @@ class GameViewController: UIViewController {
             }
             navigationController?.setNavigationBarHidden(true, animated: true)
             view.ignoresSiblingOrder = true
-            
 //            view.showsFPS = true
 //            view.showsNodeCount = true
         }
@@ -55,5 +62,16 @@ class GameViewController: UIViewController {
 
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+    func showBackButton() {
+        backButton.isHidden = false
+        UIView.animate(withDuration: 0.8) {
+            self.backButton.alpha = 1
+        }
+    }
+    
+    @objc func backToMenu() {
+        navigationController?.popViewController(animated: true)
     }
 }

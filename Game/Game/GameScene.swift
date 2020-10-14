@@ -9,7 +9,7 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene {
-   
+    
     var ball = SKSpriteNode()
     var enemy = SKSpriteNode()
     var main = SKSpriteNode()
@@ -20,7 +20,7 @@ class GameScene: SKScene {
     var score = [Int]()
     
     override func didMove(to view: SKView) {
- 
+        
         topLbl = self.childNode(withName: "topLabel") as! SKLabelNode
         btmLbl = self.childNode(withName: "btmLabel") as! SKLabelNode
         ball = self.childNode(withName: "ball") as! SKSpriteNode
@@ -49,7 +49,7 @@ class GameScene: SKScene {
         btmLbl.text = "\(score[0])"
         ball.physicsBody?.applyImpulse(CGVector(dx: -10 , dy: -10))
     }
-
+    
     func addScore(playerWhoWon : SKSpriteNode){
         
         ball.position = CGPoint(x: 0, y: 0)
@@ -73,7 +73,7 @@ class GameScene: SKScene {
                 displayGameOver()
             }
         }
-
+        
         
     }
     
@@ -96,7 +96,7 @@ class GameScene: SKScene {
             else{
                 main.run(SKAction.moveTo(x: location.x, duration: 0.2))
             }
-
+            
             
         }
         
@@ -114,7 +114,7 @@ class GameScene: SKScene {
                     main.run(SKAction.moveTo(x: location.x, duration: 0.2))
                     
                 }
-
+                
             }
             else{
                 main.run(SKAction.moveTo(x: location.x, duration: 0.2))
@@ -155,16 +155,24 @@ class GameScene: SKScene {
     func displayGameOver() {
         let gameOverScene = GameOverScene(size: size)
         gameOverScene.scaleMode = scaleMode
-
+        
         let reveal = SKTransition.crossFade(withDuration: 0.5)
         view?.presentScene(gameOverScene, transition: reveal)
+        if let navigationController = view?.window?.rootViewController as? UINavigationController,
+           let viewController = navigationController.viewControllers[1] as? GameViewController {
+            viewController.showBackButton()
+        }
     }
     
     func displayWin() {
         let gameOverScene = WinScene(size: size)
         gameOverScene.scaleMode = scaleMode
-
+        
         let reveal = SKTransition.crossFade(withDuration: 0.5)
         view?.presentScene(gameOverScene, transition: reveal)
+        if let navigationController = view?.window?.rootViewController as? UINavigationController,
+           let viewController = navigationController.viewControllers[1] as? GameViewController {
+            viewController.showBackButton()
         }
+    }
 }
