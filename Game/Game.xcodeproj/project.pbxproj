@@ -127,20 +127,14 @@
 		88DA4065252DF2D200C3589C /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				88DA409E252DF35B00C3589C /* LLPIXEL3.ttf */,
-				AEC0A17A2536811600F107BA /* SoundHelper.swift */,
-				88DA40A3252DF39600C3589C /* GameType.swift */,
+				AEC0A18E25368A4F00F107BA /* Helper */,
+				AEC0A18D25368A3300F107BA /* Scene */,
+				AEC0A18C25368A2200F107BA /* Controller */,
+				88DA406C252DF2D200C3589C /* Main.storyboard */,
 				88DA4066252DF2D200C3589C /* AppDelegate.swift */,
 				88DA4068252DF2D200C3589C /* SceneDelegate.swift */,
 				88DA4099252DF34000C3589C /* GameScene.sks */,
 				88DA40B7252DF6DC00C3589C /* Actions.sks */,
-				88DA406C252DF2D200C3589C /* Main.storyboard */,
-				88DA40A2252DF39600C3589C /* GameScene.swift */,
-				88FCA7CB252E422700EE1D55 /* GameOverScene.swift */,
-				88FCA7D3252F39EF00EE1D55 /* WinScene.swift */,
-				88DA40A5252DF39600C3589C /* GameViewController.swift */,
-				88DA40A4252DF39600C3589C /* MenuVC.swift */,
-				88FCA7C3252DFDC500EE1D55 /* WinVC.swift */,
 				AEC0A17F2536816700F107BA /* Resources */,
 				88DA406F252DF2D300C3589C /* Assets.xcassets */,
 				88DA4071252DF2D300C3589C /* LaunchScreen.storyboard */,
@@ -170,6 +164,7 @@
 		AEC0A17F2536816700F107BA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				88DA409E252DF35B00C3589C /* LLPIXEL3.ttf */,
 				AEC0A1802536817000F107BA /* Sounds */,
 			);
 			path = Resources;
@@ -184,6 +179,35 @@
 				AEC0A1832536820C00F107BA /* winSound.mp3 */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		AEC0A18C25368A2200F107BA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				88DA40A5252DF39600C3589C /* GameViewController.swift */,
+				88DA40A4252DF39600C3589C /* MenuVC.swift */,
+				88FCA7C3252DFDC500EE1D55 /* WinVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AEC0A18D25368A3300F107BA /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				88DA40A2252DF39600C3589C /* GameScene.swift */,
+				88FCA7CB252E422700EE1D55 /* GameOverScene.swift */,
+				88FCA7D3252F39EF00EE1D55 /* WinScene.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		AEC0A18E25368A4F00F107BA /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				AEC0A17A2536811600F107BA /* SoundHelper.swift */,
+				88DA40A3252DF39600C3589C /* GameType.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
