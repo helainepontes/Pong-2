@@ -93,7 +93,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rSu-hc-7vJ">
                                 <rect key="frame" x="124" y="208" width="16" height="16"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="16" id="Yjd-Py-Day"/>
                                     <constraint firstAttribute="height" constant="16" id="gws-sB-Plt"/>
@@ -157,7 +157,7 @@
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBT-34-3VY">
                                 <rect key="frame" x="80" y="112" width="80" height="16"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="RCT-Rd-qVm"/>
                                     <constraint firstAttribute="height" constant="16" id="RZh-U6-zjA"/>
@@ -165,7 +165,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gY1-s3-Eyh">
                                 <rect key="frame" x="254" y="822" width="80" height="16"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="QJr-TU-2Ur"/>
                                     <constraint firstAttribute="height" constant="16" id="vqV-yL-gRT"/>
