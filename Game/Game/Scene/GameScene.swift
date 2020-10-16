@@ -144,12 +144,12 @@ class GameScene: SKScene {
             
             break
         }
-
-        if ball.position.y <= main.position.y - 30 {
-            addScore(playerWhoWon: enemy)
-        }
-        else if ball.position.y >= enemy.position.y + 30 {
-            addScore(playerWhoWon: main)
+        
+        switch ball.position {
+            case ball.position.y...main.position.y - 30: 
+                addScore(playerWhoWon: enemy)
+            case ball.position.y >= enemy.position.y + 30:
+                addScore(playerWhoWon: main)
         }
     }
     
