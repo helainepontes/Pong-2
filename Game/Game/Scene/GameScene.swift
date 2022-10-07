@@ -94,16 +94,14 @@ class GameScene: SKScene {
                     main.run(SKAction.moveTo(x: location.x, duration: 0.2))
                     
                 }
-                
             }
-            else{
+            else {
                 main.run(SKAction.moveTo(x: location.x, duration: 0.2))
             }
-            
-            
         }
         
     }
+
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
             let location = touch.location(in: self)
@@ -113,16 +111,13 @@ class GameScene: SKScene {
                     enemy.run(SKAction.moveTo(x: location.x, duration: 0.2))
                 }
                 if location.y < 0 {
-                    
                     main.run(SKAction.moveTo(x: location.x, duration: 0.2))
-                    
                 }
                 
             }
-            else{
+            else {
                 main.run(SKAction.moveTo(x: location.x, duration: 0.2))
             }
-            
         }
     }
     
@@ -141,7 +136,6 @@ class GameScene: SKScene {
             enemy.run(SKAction.moveTo(x: ball.position.x, duration: 0.7))
             break
         case .player2:
-            
             break
         }
 
@@ -163,6 +157,7 @@ class GameScene: SKScene {
            let viewController = navigationController.viewControllers[1] as? GameViewController {
             viewController.showBackButton()
         }
+
         SoundHelper.shared.playSound(ofType: .lose)
     }
     
@@ -176,6 +171,7 @@ class GameScene: SKScene {
            let viewController = navigationController.viewControllers[1] as? GameViewController {
             viewController.showBackButton()
         }
+
         SoundHelper.shared.playSound(ofType: .win)
     }
 }
