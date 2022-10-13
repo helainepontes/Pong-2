@@ -13,7 +13,7 @@ import GameplayKit
 var currentGameType = gameType.medium
 
 
-class GameViewController: UIViewController {
+final class GameViewController: UIViewController {
 
     @IBOutlet weak var backButton: UIButton! {
         didSet {
