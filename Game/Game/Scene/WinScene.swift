@@ -15,7 +15,7 @@ class WinScene: SKScene {
     override init(size: CGSize) {
         super.init(size: size)
         self.name = "WinScene"
-        self.backgroundColor = UIColor(red: 28/255, green: 28/255, blue: 28/255, alpha: 28/255)
+        self.backgroundColor = UIColor.gameColor
 
         addChild(notificationLabel)
         notificationLabel.fontSize = 70
@@ -26,4 +26,8 @@ class WinScene: SKScene {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
+
+extension UIcolor {
+    static let gameColor = UIColor(red: 28/255, green: 28/255, blue: 28/255, alpha: 28/255)
 }
